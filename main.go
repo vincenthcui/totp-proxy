@@ -54,6 +54,8 @@ func main() {
 				return errors.Wrap(err, "parse upstream")
 			}
 
+			log.Println("proxy to upstream:", up)
+
 			if secret == "" {
 				secret = defaultSecret
 				log.Println("using default secret key:", secret)
